@@ -1,0 +1,670 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title></title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --code-block-bg-color: inherit; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+input, button, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.typora-export p { white-space: normal; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+#write > figure:first-child { margin-top: 16px; }
+figure { overflow-x: auto; margin: -8px 0px 0px -8px; max-width: calc(100% + 16px); padding: 8px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: var(--code-block-bg-color); position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.CodeMirror-line { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print {
+  html, body { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+.md-tag { opacity: 0.5; }
+pre, code, tt { font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background: transparent !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+table tr th { border-bottom: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(221, 221, 221); }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(204, 204, 204); margin: 0px; padding: 0px; }
+table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 32px; }
+.task-list-item input { top: 3px; left: 8px; }
+@media screen and (min-width: 914px) {
+}
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border: 1px solid rgb(221, 221, 221); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+
+
+
+
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-node'><h2><a name='header-n3' class='md-header-anchor '></a>extract</h2><p>!&quot;#$%&amp;&#39;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[￥]^_&#39;abcdefghijklmnopqrstuvwxyz{|}￣｡｢｣､･ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ
+ﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ
+、。，．・：；？！゛゜´｀¨＾￣＿ヽヾゝゞ〃仝々〆〇ー―‐／＼～∥｜…
+‥‘’“”（）〔〕［］｛｝〈〉《》「」『』【】＋－±×÷＝≠＜＞≦≧∞
+∴♂♀°′″℃￥＄￠￡％＃＆＊＠§☆★○●◎◇◆□■△▲▽▼※〒→←↑
+↓〓∈∋⊆⊇⊂⊃∪∩∧∨￢⇒⇔∀∃∠⊥⌒∂∇≡≒≪≫√∽∝∵∫∬Å‰♯
+♭♪†‡¶◯０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳ
+ＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚぁあ
+ぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづ
+てでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよ
+らりるれろゎわゐゑをんァアィイゥウェエォオカガキギクグケゲコゴサザシジ
+スズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホ
+ボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶΑΒΓΔΕΖΗΘ
+ΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστ
+υφχψωАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬ
+ЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэю
+я─│┌┐┘└├┬┤┴┼━┃┏┓┛┗┣┳┫┻╋┠┯┨┷┿┝┰┥┸╂
+亜唖娃阿哀愛挨姶逢葵茜穐悪握渥旭葦芦鯵梓圧斡扱宛姐虻飴絢綾鮎或粟袷安庵
+按暗案闇鞍杏以伊位依偉囲夷委威尉惟意慰易椅為畏異移維緯胃萎衣謂違遺医井
+亥域育郁磯一壱溢逸稲茨芋鰯允印咽員因姻引飲淫胤蔭院陰隠韻吋右宇烏羽迂雨
+卯鵜窺丑碓臼渦嘘唄欝蔚鰻姥厩浦瓜閏噂云運雲荏餌叡営嬰影映曳栄永泳洩瑛盈
+穎頴英衛詠鋭液疫益駅悦謁越閲榎厭円園堰奄宴延怨掩援沿演炎焔煙燕猿縁艶苑
+薗遠鉛鴛塩於汚甥凹央奥往応押旺横欧殴王翁襖鴬鴎黄岡沖荻億屋憶臆桶牡乙俺
+卸恩温穏音下化仮何伽価佳加可嘉夏嫁家寡科暇果架歌河火珂禍禾稼箇花苛茄荷
+華菓蝦課嘩貨迦過霞蚊俄峨我牙画臥芽蛾賀雅餓駕介会解回塊壊廻快怪悔恢懐戒
+拐改魁晦械海灰界皆絵芥蟹開階貝凱劾外咳害崖慨概涯碍蓋街該鎧骸浬馨蛙垣柿
+蛎鈎劃嚇各廓拡撹格核殻獲確穫覚角赫較郭閣隔革学岳楽額顎掛笠樫橿梶鰍潟割
+喝恰括活渇滑葛褐轄且鰹叶椛樺鞄株兜竃蒲釜鎌噛鴨栢茅萱粥刈苅瓦乾侃冠寒刊
+勘勧巻喚堪姦完官寛干幹患感慣憾換敢柑桓棺款歓汗漢澗潅環甘監看竿管簡緩缶
+翰肝艦莞観諌貫還鑑間閑関陥韓館舘丸含岸巌玩癌眼岩翫贋雁頑顔願企伎危喜器
+基奇嬉寄岐希幾忌揮机旗既期棋棄機帰毅気汽畿祈季稀紀徽規記貴起軌輝飢騎鬼
+亀偽儀妓宜戯技擬欺犠疑祇義蟻誼議掬菊鞠吉吃喫桔橘詰砧杵黍却客脚虐逆丘久
+仇休及吸宮弓急救朽求汲泣灸球究窮笈級糾給旧牛去居巨拒拠挙渠虚許距鋸漁禦
+魚亨享京供侠僑兇競共凶協匡卿叫喬境峡強彊怯恐恭挟教橋況狂狭矯胸脅興蕎郷
+鏡響饗驚仰凝尭暁業局曲極玉桐粁僅勤均巾錦斤欣欽琴禁禽筋緊芹菌衿襟謹近金
+吟銀九倶句区狗玖矩苦躯駆駈駒具愚虞喰空偶寓遇隅串櫛釧屑屈掘窟沓靴轡窪熊
+隈粂栗繰桑鍬勲君薫訓群軍郡卦袈祁係傾刑兄啓圭珪型契形径恵慶慧憩掲携敬景
+桂渓畦稽系経継繋罫茎荊蛍計詣警軽頚鶏芸迎鯨劇戟撃激隙桁傑欠決潔穴結血訣
+月件倹倦健兼券剣喧圏堅嫌建憲懸拳捲検権牽犬献研硯絹県肩見謙賢軒遣鍵険顕
+験鹸元原厳幻弦減源玄現絃舷言諺限乎個古呼固姑孤己庫弧戸故枯湖狐糊袴股胡
+菰虎誇跨鈷雇顧鼓五互伍午呉吾娯後御悟梧檎瑚碁語誤護醐乞鯉交佼侯候倖光公
+功効勾厚口向后喉坑垢好孔孝宏工巧巷幸広庚康弘恒慌抗拘控攻昂晃更杭校梗構
+江洪浩港溝甲皇硬稿糠紅紘絞綱耕考肯肱腔膏航荒行衡講貢購郊酵鉱砿鋼閤降項
+香高鴻剛劫号合壕拷濠豪轟麹克刻告国穀酷鵠黒獄漉腰甑忽惚骨狛込此頃今困坤
+墾婚恨懇昏昆根梱混痕紺艮魂些佐叉唆嵯左差査沙瑳砂詐鎖裟坐
+座挫債催再最哉
+塞妻宰彩才採栽歳済災采犀砕砦祭斎細菜裁載際剤在材罪財冴坂阪堺榊肴咲崎埼
+碕鷺作削咋搾昨朔柵窄策索錯桜鮭笹匙冊刷察拶撮擦札殺薩雑皐鯖捌錆鮫皿晒三
+傘参山惨撒散桟燦珊産算纂蚕讃賛酸餐斬暫残仕仔伺使刺司史嗣四士始姉姿子屍
+市師志思指支孜斯施旨枝止死氏獅祉私糸紙紫肢脂至視詞詩試誌諮資賜雌飼歯事
+似侍児字寺慈持時次滋治爾璽痔磁示而耳自蒔辞汐鹿式識鴫竺軸宍雫七叱執失嫉
+室悉湿漆疾質実蔀篠偲柴芝屡蕊縞舎写射捨赦斜煮社紗者謝車遮蛇邪借勺尺杓灼
+爵酌釈錫若寂弱惹主取守手朱殊狩珠種腫趣酒首儒受呪寿授樹綬需囚収周宗就州
+修愁拾洲秀秋終繍習臭舟蒐衆襲讐蹴輯週酋酬集醜什住充十従戎柔汁渋獣縦重銃
+叔夙宿淑祝縮粛塾熟出術述俊峻春瞬竣舜駿准循旬楯殉淳準潤盾純巡遵醇順処初
+所暑曙渚庶緒署書薯藷諸助叙女序徐恕鋤除傷償勝匠升召哨商唱嘗奨妾娼宵将小
+少尚庄床廠彰承抄招掌捷昇昌昭晶松梢樟樵沼消渉湘焼焦照症省硝礁祥称章笑粧
+紹肖菖蒋蕉衝裳訟証詔詳象賞醤鉦鍾鐘障鞘上丈丞乗冗剰城場壌嬢常情擾条杖浄
+状畳穣蒸譲醸錠嘱埴飾拭植殖燭織職色触食蝕辱尻伸信侵唇娠寝審心慎振新晋森
+榛浸深申疹真神秦紳臣芯薪親診身辛進針震人仁刃塵壬尋甚尽腎訊迅陣靭笥諏須
+酢図厨逗吹垂帥推水炊睡粋翠衰遂酔錐錘随瑞髄崇嵩数枢趨雛据杉椙菅頗雀裾澄
+摺寸世瀬畝是凄制勢姓征性成政整星晴棲栖正清牲生盛精聖声製西誠誓請逝醒青
+静斉税脆隻席惜戚斥昔析石積籍績脊責赤跡蹟碩切拙接摂折設窃節説雪絶舌蝉仙
+先千占宣専尖川戦扇撰栓栴泉浅洗染潜煎煽旋穿箭線繊羨腺舛船薦詮賎践選遷銭
+銑閃鮮前善漸然全禅繕膳糎噌塑岨措曾曽楚狙疏疎礎祖租粗素組蘇訴阻遡鼠僧創
+双叢倉喪壮奏爽宋層匝惣想捜掃挿掻操早曹巣槍槽漕燥争痩相窓糟総綜聡草荘葬
+蒼藻装走送遭鎗霜騒像増憎臓蔵贈造促側則即息捉束測足速俗属賊族続卒袖其揃
+存孫尊損村遜他多太汰詑唾堕妥惰打柁舵楕陀駄騨体堆対耐岱帯待怠態戴替泰滞
+胎腿苔袋貸退逮隊黛鯛代台大第醍題鷹滝瀧卓啄宅托択拓沢濯琢託鐸濁諾茸凧蛸
+只叩但達辰奪脱巽竪辿棚谷狸鱈樽誰丹単嘆坦担探旦歎淡湛炭短端箪綻耽胆蛋誕
+鍛団壇弾断暖檀段男談値知地弛恥智池痴稚置致蜘遅馳築畜竹筑蓄逐秩窒茶嫡着
+中仲宙忠抽昼柱注虫衷註酎鋳駐樗瀦猪苧著貯丁兆凋喋寵帖帳庁弔張彫徴懲挑暢
+朝潮牒町眺聴脹腸蝶調諜超跳銚長頂鳥勅捗直朕沈珍賃鎮陳津墜椎槌追鎚痛通塚
+栂掴槻佃漬柘辻蔦綴鍔椿潰坪壷嬬紬爪吊釣鶴
+亭低停偵剃貞呈堤定帝底庭廷弟悌
+抵挺提梯汀碇禎程締艇訂諦蹄逓邸鄭釘鼎泥摘擢敵滴的笛適鏑溺哲徹撤轍迭鉄典
+填天展店添纏甜貼転顛点伝殿澱田電兎吐堵塗妬屠徒斗杜渡登菟賭途都鍍砥砺努
+度土奴怒倒党冬凍刀唐塔塘套宕島嶋悼投搭東桃梼棟盗淘湯涛灯燈当痘祷等答筒
+糖統到董蕩藤討謄豆踏逃透鐙陶頭騰闘働動同堂導憧撞洞瞳童胴萄道銅峠鴇匿得
+徳涜特督禿篤毒独読栃橡凸突椴届鳶苫寅酉瀞噸屯惇敦沌豚遁頓呑曇鈍奈那内乍
+凪薙謎灘捺鍋楢馴縄畷南楠軟難汝二尼弐迩匂賑肉虹廿日乳入如尿韮任妊忍認濡
+禰祢寧葱猫熱年念捻撚燃粘乃廼之埜嚢悩濃納能脳膿農覗蚤巴把播覇杷波派琶破
+婆罵芭馬俳廃拝排敗杯盃牌背肺輩配倍培媒梅楳煤狽買売賠陪這蝿秤矧萩伯剥博
+拍柏泊白箔粕舶薄迫曝漠爆縛莫駁麦函箱硲箸肇筈櫨幡肌畑畠八鉢溌発醗髪伐罰
+抜筏閥鳩噺塙蛤隼伴判半反叛帆搬斑板氾汎版犯班畔繁般藩販範釆煩頒飯挽晩番
+盤磐蕃蛮匪卑否妃庇彼悲扉批披斐比泌疲皮碑秘緋罷肥被誹費避非飛樋簸備尾微
+枇毘琵眉美鼻柊稗匹疋髭彦膝菱肘弼必畢筆逼桧姫媛紐百謬俵彪標氷漂瓢票表評
+豹廟描病秒苗錨鋲蒜蛭鰭品彬斌浜瀕貧賓頻敏瓶不付埠夫婦富冨布府怖扶敷斧普
+浮父符腐膚芙譜負賦赴阜附侮撫武舞葡蕪部封楓風葺蕗伏副復幅服福腹複覆淵弗
+払沸仏物鮒分吻噴墳憤扮焚奮粉糞紛雰文聞丙併兵塀幣平弊柄並蔽閉陛米頁僻壁
+癖碧別瞥蔑箆偏変片篇編辺返遍便勉娩弁鞭保舗鋪圃捕歩甫補輔穂募墓慕戊暮母
+簿菩倣俸包呆報奉宝峰峯崩庖抱捧放方朋法泡烹砲縫胞芳萌蓬蜂褒訪豊邦鋒飽鳳
+鵬乏亡傍剖坊妨帽忘忙房暴望某棒冒紡肪膨謀貌貿鉾防吠頬北僕卜墨撲朴牧睦穆
+釦勃没殆堀幌奔本翻凡盆摩磨魔麻埋妹昧枚毎哩槙幕膜枕鮪柾鱒桝亦俣又抹末沫
+迄侭繭麿万慢満漫蔓味未魅巳箕岬密蜜湊蓑稔脈妙粍民眠務夢無牟矛霧鵡椋婿娘
+冥名命明盟迷銘鳴姪牝滅免棉綿緬面麺摸模茂妄孟毛猛盲網耗蒙儲木黙目杢勿餅
+尤戻籾貰問悶紋門匁也冶夜爺耶野弥矢厄役約薬訳躍靖柳薮鑓愉愈油癒諭輸唯佑
+優勇友宥幽悠憂揖有柚湧涌猶猷由祐裕誘遊邑郵雄融夕予余与誉輿預傭幼妖容庸
+揚揺擁曜楊様洋溶熔用窯羊耀葉蓉要謡踊遥陽養慾抑欲沃浴翌翼淀羅螺裸来莱頼
+雷洛絡落酪乱卵嵐欄濫藍蘭覧利吏履李梨理璃痢裏裡里離陸律率立葎掠略劉流溜
+琉留硫粒隆竜龍侶慮旅虜了亮僚両凌寮料梁涼猟療瞭稜糧良諒遼量陵領力緑倫厘
+林淋燐琳臨輪隣鱗麟瑠塁涙累類令伶例冷励嶺怜玲礼苓鈴隷零霊麗齢暦歴列劣烈
+裂廉恋憐漣煉簾練聯蓮連
+錬呂魯櫓炉賂路露労婁廊弄朗楼榔浪漏牢狼篭老聾蝋郎
+六麓禄肋録論倭和話歪賄脇惑枠鷲亙亘鰐詫藁蕨椀湾碗腕
+弌丐丕个丱丶丼丿乂乖
+乘亂亅豫亊舒弍于亞亟
+亠亢亰亳亶从仍仄仆仂
+仗仞仭仟价伉佚估佛佝
+佗佇佶侈侏侘佻佩佰侑
+佯來侖儘俔俟俎俘俛俑
+俚俐俤俥倚倨倔倪倥倅
+伜俶倡倩倬俾俯們倆偃
+假會偕偐偈做偖偬偸傀
+傚傅傴傲僉僊傳僂僖僞
+僥僭僣僮價僵儉儁儂儖
+儕儔儚儡儺儷儼儻儿兀
+兒兌兔兢竸兩兪兮冀冂
+囘册冉冏冑冓冕冖冤冦
+冢冩冪冫决冱冲冰况冽
+凅凉凛几處凩凭凰凵凾
+刄刋刔刎刧刪刮刳刹剏
+剄剋剌剞剔剪剴剩剳剿
+剽劍劔劒剱劈劑辨辧劬
+劭劼劵勁勍勗勞勣勦飭
+勠勳勵勸勹匆匈甸匍匐
+匏匕匚匣匯匱匳匸區卆
+卅丗卉卍凖卞卩卮夘卻
+卷厂厖厠厦厥厮厰厶參
+簒雙叟曼燮叮叨叭叺吁
+吽呀听吭吼吮吶吩吝呎
+咏呵咎呟呱呷呰咒呻咀
+呶咄咐咆哇咢咸咥咬哄
+哈咨咫哂咤咾咼哘哥哦
+唏唔哽哮哭哺哢唹啀啣
+啌售啜啅啖啗唸唳啝喙
+喀咯喊喟啻啾喘喞單啼
+喃喩喇喨嗚嗅嗟嗄嗜嗤
+嗔嘔嗷嘖嗾嗽嘛嗹噎噐
+營嘴嘶嘲嘸噫噤嘯噬噪
+嚆嚀嚊嚠嚔嚏嚥嚮嚶嚴
+囂嚼囁囃囀囈囎囑囓囗
+囮囹圀囿圄圉圈國圍圓
+團圖嗇圜圦圷圸坎圻址
+坏坩埀垈坡坿垉垓垠垳
+垤垪垰埃埆埔埒埓堊埖
+埣堋堙堝塲堡塢塋塰毀
+塒堽塹墅墹墟墫墺壞墻
+墸墮壅壓壑壗壙壘壥壜
+壤壟壯壺壹壻壼壽夂夊
+夐夛梦夥夬夭夲夸夾竒
+奕奐奎奚奘奢奠奧奬奩
+奸妁妝佞侫妣妲姆姨姜
+妍姙姚娥娟娑娜娉娚婀
+婬婉娵娶婢婪媚媼媾嫋
+嫂媽嫣嫗嫦嫩嫖嫺嫻嬌
+嬋嬖嬲嫐嬪嬶嬾孃孅孀
+孑孕孚孛孥孩孰孳孵學
+斈孺宀它宦宸寃寇寉寔
+寐寤實寢寞寥寫寰寶寳
+尅將專對尓尠尢尨尸尹
+屁屆屎屓屐屏孱屬屮乢
+屶屹岌岑岔妛岫岻岶岼
+岷峅岾峇峙峩峽峺峭嶌
+峪崋崕崗嵜崟崛崑崔崢
+崚崙崘嵌嵒嵎嵋嵬嵳嵶
+嶇嶄嶂嶢嶝嶬嶮嶽嶐嶷
+嶼巉巍巓巒巖巛巫已巵
+帋帚帙帑帛帶帷幄幃幀
+幎幗幔幟幢幤幇幵并幺
+麼广庠廁廂廈廐廏廖廣
+廝廚廛廢廡廨廩廬廱廳
+廰廴廸廾弃弉彝彜弋弑
+弖弩弭弸彁彈彌彎弯彑
+彖彗彙彡彭彳彷徃徂彿
+徊很徑徇從徙徘徠徨徭
+徼忖忻忤忸忱忝悳忿怡
+恠怙怐怩怎怱怛怕怫怦
+怏怺恚恁恪恷恟恊恆恍
+恣恃恤恂恬恫恙悁悍惧
+悃悚悄悛悖悗悒悧悋惡
+悸惠惓悴忰悽惆悵惘慍
+愕愆惶惷愀惴惺愃愡惻
+惱愍愎慇愾愨愧慊愿愼
+愬愴愽慂慄慳慷慘慙慚
+慫慴慯慥慱慟慝慓慵憙
+憖憇憬憔憚憊憑憫憮懌
+懊應懷懈懃懆憺懋罹懍
+懦懣懶懺懴懿懽懼懾戀
+戈戉戍戌戔戛戞戡截戮
+戰戲戳扁扎扞扣扛扠扨
+扼抂抉找抒抓抖拔抃抔
+拗拑抻拏拿拆擔拈拜拌
+拊拂拇抛拉挌拮拱挧挂
+挈拯拵捐挾捍搜捏掖掎
+掀掫捶掣掏掉掟掵捫捩</p><p>掾揩揀揆揣揉插揶揄搖
+搴搆搓搦搶攝搗搨搏摧
+摯摶摎攪撕撓撥撩撈撼
+據擒擅擇撻擘擂擱擧舉
+擠擡抬擣擯攬擶擴擲擺
+攀擽攘攜攅攤攣攫攴攵
+攷收攸畋效敖敕敍敘敞
+敝敲數斂斃變斛斟斫斷
+旃旆旁旄旌旒旛旙无旡
+旱杲昊昃旻杳昵昶昴昜
+晏晄晉晁晞晝晤晧晨晟
+晢晰暃暈暎暉暄暘暝曁
+暹曉暾暼曄暸曖曚曠昿
+曦曩曰曵曷朏朖朞朦朧
+霸朮朿朶杁朸朷杆杞杠
+杙杣杤枉杰枩杼杪枌枋
+枦枡枅枷柯枴柬枳柩枸
+柤柞柝柢柮枹柎柆柧檜
+栞框栩桀桍栲桎梳栫桙
+档桷桿梟梏梭梔條梛梃
+檮梹桴梵梠梺椏梍桾椁
+棊椈棘椢椦棡椌棍棔棧
+棕椶椒椄棗棣椥棹棠棯
+椨椪椚椣椡棆楹楷楜楸
+楫楔楾楮椹楴椽楙椰楡
+楞楝榁楪榲榮槐榿槁槓
+榾槎寨槊槝榻槃榧樮榑
+榠榜榕榴槞槨樂樛槿權
+槹槲槧樅榱樞槭樔槫樊
+樒櫁樣樓橄樌橲樶橸橇
+橢橙橦橈樸樢檐檍檠檄
+檢檣檗蘗檻櫃櫂檸檳檬
+櫞櫑櫟檪櫚櫪櫻欅蘖櫺
+欒欖鬱欟欸欷盜欹飮歇
+歃歉歐歙歔歛歟歡歸歹
+歿殀殄殃殍殘殕殞殤殪
+殫殯殲殱殳殷殼毆毋毓
+毟毬毫毳毯麾氈氓气氛
+氤氣汞汕汢汪沂沍沚沁
+沛汾汨汳沒沐泄泱泓沽
+泗泅泝沮沱沾沺泛泯泙
+泪洟衍洶洫洽洸洙洵洳
+洒洌浣涓浤浚浹浙涎涕
+濤涅淹渕渊涵淇淦涸淆
+淬淞淌淨淒淅淺淙淤淕
+淪淮渭湮渮渙湲湟渾渣
+湫渫湶湍渟湃渺湎渤滿
+渝游溂溪溘滉溷滓溽溯
+滄溲滔滕溏溥滂溟潁漑
+灌滬滸滾漿滲漱滯漲滌
+漾漓滷澆潺潸澁澀潯潛
+濳潭澂潼潘澎澑濂潦澳
+澣澡澤澹濆澪濟濕濬濔
+濘濱濮濛瀉瀋濺瀑瀁瀏
+濾瀛瀚潴瀝瀘瀟瀰瀾瀲
+灑灣炙炒炯烱炬炸炳炮
+烟烋烝烙焉烽焜焙煥煕
+熈煦煢煌煖煬熏燻熄熕
+熨熬燗熹熾燒燉燔燎燠
+燬燧燵燼燹燿爍爐爛爨
+爭爬爰爲爻爼爿牀牆牋
+牘牴牾犂犁犇犒犖犢犧
+犹犲狃狆狄狎狒狢狠狡
+狹狷倏猗猊猜猖猝猴猯
+猩猥猾獎獏默獗獪獨獰
+獸獵獻獺珈玳珎玻珀珥
+珮珞璢琅瑯琥珸琲琺瑕
+琿瑟瑙瑁瑜瑩瑰瑣瑪瑶
+瑾璋璞璧瓊瓏瓔珱瓠瓣
+瓧瓩瓮瓲瓰瓱瓸瓷甄甃
+甅甌甎甍甕甓甞甦甬甼
+畄畍畊畉畛畆畚畩畤畧
+畫畭畸當疆疇畴疊疉疂
+疔疚疝疥疣痂疳痃疵疽
+疸疼疱痍痊痒痙痣痞痾
+痿痼瘁痰痺痲痳瘋瘍瘉
+瘟瘧瘠瘡瘢瘤瘴瘰瘻癇
+癈癆癜癘癡癢癨癩癪癧
+癬癰癲癶癸發皀皃皈皋
+皎皖皓皙皚皰皴皸皹皺
+盂盍盖盒盞盡盥盧盪蘯
+盻眈眇眄眩眤眞眥眦眛
+眷眸睇睚睨睫睛睥睿睾
+睹瞎瞋瞑瞠瞞瞰瞶瞹瞿
+瞼瞽瞻矇矍矗矚矜矣矮
+矼砌砒礦砠礪硅碎硴碆
+硼碚碌碣碵碪碯磑磆磋
+磔碾碼磅磊磬磧磚磽磴
+礇礒礑礙礬礫祀祠祗祟
+祚祕祓祺祿禊禝禧齋禪
+禮禳禹禺秉秕秧秬秡秣</p><p>稈稍稘稙稠稟禀稱稻稾
+稷穃穗穉穡穢穩龝穰穹
+穽窈窗窕窘窖窩竈窰窶
+竅竄窿邃竇竊竍竏竕竓
+站竚竝竡竢竦竭竰笂笏
+笊笆笳笘笙笞笵笨笶筐
+筺笄筍笋筌筅筵筥筴筧
+筰筱筬筮箝箘箟箍箜箚
+箋箒箏筝箙篋篁篌篏箴
+篆篝篩簑簔篦篥籠簀簇
+簓篳篷簗簍篶簣簧簪簟
+簷簫簽籌籃籔籏籀籐籘
+籟籤籖籥籬籵粃粐粤粭
+粢粫粡粨粳粲粱粮粹粽
+糀糅糂糘糒糜糢鬻糯糲
+糴糶糺紆紂紜紕紊絅絋
+紮紲紿紵絆絳絖絎絲絨
+絮絏絣經綉絛綏絽綛綺
+綮綣綵緇綽綫總綢綯緜
+綸綟綰緘緝緤緞緻緲緡
+縅縊縣縡縒縱縟縉縋縢
+繆繦縻縵縹繃縷縲縺繧
+繝繖繞繙繚繹繪繩繼繻
+纃緕繽辮繿纈纉續纒纐
+纓纔纖纎纛纜缸缺罅罌
+罍罎罐网罕罔罘罟罠罨
+罩罧罸羂羆羃羈羇羌羔
+羞羝羚羣羯羲羹羮羶羸
+譱翅翆翊翕翔翡翦翩翳
+翹飜耆耄耋耒耘耙耜耡
+耨耿耻聊聆聒聘聚聟聢
+聨聳聲聰聶聹聽聿肄肆
+肅肛肓肚肭冐肬胛胥胙
+胝胄胚胖脉胯胱脛脩脣
+脯腋隋腆脾腓腑胼腱腮
+腥腦腴膃膈膊膀膂膠膕
+膤膣腟膓膩膰膵膾膸膽
+臀臂膺臉臍臑臙臘臈臚
+臟臠臧臺臻臾舁舂舅與
+舊舍舐舖舩舫舸舳艀艙
+艘艝艚艟艤艢艨艪艫舮
+艱艷艸艾芍芒芫芟芻芬
+苡苣苟苒苴苳苺莓范苻
+苹苞茆苜茉苙茵茴茖茲
+茱荀茹荐荅茯茫茗茘莅
+莚莪莟莢莖茣莎莇莊荼
+莵荳荵莠莉莨菴萓菫菎
+菽萃菘萋菁菷萇菠菲萍
+萢萠莽萸蔆菻葭萪萼蕚
+蒄葷葫蒭葮蒂葩葆萬葯
+葹萵蓊葢蒹蒿蒟蓙蓍蒻
+蓚蓐蓁蓆蓖蒡蔡蓿蓴蔗
+蔘蔬蔟蔕蔔蓼蕀蕣蕘蕈
+蕁蘂蕋蕕薀薤薈薑薊薨
+蕭薔薛藪薇薜蕷蕾薐藉
+薺藏薹藐藕藝藥藜藹蘊
+蘓蘋藾藺蘆蘢蘚蘰蘿虍
+乕虔號虧虱蚓蚣蚩蚪蚋
+蚌蚶蚯蛄蛆蚰蛉蠣蚫蛔
+蛞蛩蛬蛟蛛蛯蜒蜆蜈蜀
+蜃蛻蜑蜉蜍蛹蜊蜴蜿蜷
+蜻蜥蜩蜚蝠蝟蝸蝌蝎蝴
+蝗蝨蝮蝙蝓蝣蝪蠅螢螟
+螂螯蟋螽蟀蟐雖螫蟄螳
+蟇蟆螻蟯蟲蟠蠏蠍蟾蟶
+蟷蠎蟒蠑蠖蠕蠢蠡蠱蠶
+蠹蠧蠻衄衂衒衙衞衢衫
+袁衾袞衵衽袵衲袂袗袒
+袮袙袢袍袤袰袿袱裃裄
+裔裘裙裝裹褂裼裴裨裲
+褄褌褊褓襃褞褥褪褫襁
+襄褻褶褸襌褝襠襞襦襤
+襭襪襯襴襷襾覃覈覊覓
+覘覡覩覦覬覯覲覺覽覿
+觀觚觜觝觧觴觸訃訖訐
+訌訛訝訥訶詁詛詒詆詈
+詼詭詬詢誅誂誄誨誡誑
+誥誦誚誣諄諍諂諚諫諳
+諧諤諱謔諠諢諷諞諛謌
+謇謚諡謖謐謗謠謳鞫謦
+謫謾謨譁譌譏譎證譖譛
+譚譫譟譬譯譴譽讀讌讎
+讒讓讖讙讚谺豁谿豈豌
+豎豐豕豢豬豸豺貂貉貅
+貊貍貎貔豼貘戝貭貪貽
+貲貳貮貶賈賁賤賣賚賽
+賺賻贄贅贊贇贏贍贐齎
+贓賍贔贖赧赭赱赳趁趙
+跂趾趺跏跚跖跌跛跋跪
+跫跟跣跼踈踉跿踝踞踐
+踟蹂踵踰踴蹊蹇蹉蹌蹐</p><p>蹈蹙蹤蹠踪蹣蹕蹶蹲蹼
+躁躇躅躄躋躊躓躑躔躙
+躪躡躬躰軆躱躾軅軈軋
+軛軣軼軻軫軾輊輅輕輒
+輙輓輜輟輛輌輦輳輻輹
+轅轂輾轌轉轆轎轗轜轢
+轣轤辜辟辣辭辯辷迚迥
+迢迪迯邇迴逅迹迺逑逕
+逡逍逞逖逋逧逶逵逹迸
+遏遐遑遒逎遉逾遖遘遞
+遨遯遶隨遲邂遽邁邀邊
+邉邏邨邯邱邵郢郤扈郛
+鄂鄒鄙鄲鄰酊酖酘酣酥
+酩酳酲醋醉醂醢醫醯醪
+醵醴醺釀釁釉釋釐釖釟
+釡釛釼釵釶鈞釿鈔鈬鈕
+鈑鉞鉗鉅鉉鉤鉈銕鈿鉋
+鉐銜銖銓銛鉚鋏銹銷鋩
+錏鋺鍄錮錙錢錚錣錺錵
+錻鍜鍠鍼鍮鍖鎰鎬鎭鎔
+鎹鏖鏗鏨鏥鏘鏃鏝鏐鏈
+鏤鐚鐔鐓鐃鐇鐐鐶鐫鐵
+鐡鐺鑁鑒鑄鑛鑠鑢鑞鑪
+鈩鑰鑵鑷鑽鑚鑼鑾钁鑿
+閂閇閊閔閖閘閙閠閨閧
+閭閼閻閹閾闊濶闃闍闌
+闕闔闖關闡闥闢阡阨阮
+阯陂陌陏陋陷陜陞陝陟
+陦陲陬隍隘隕隗險隧隱
+隲隰隴隶隸隹雎雋雉雍
+襍雜霍雕雹霄霆霈霓霎
+霑霏霖霙霤霪霰霹霽霾
+靄靆靈靂靉靜靠靤靦靨
+勒靫靱靹鞅靼鞁靺鞆鞋
+鞏鞐鞜鞨鞦鞣鞳鞴韃韆
+韈韋韜韭齏韲竟韶韵頏
+頌頸頤頡頷頽顆顏顋顫
+顯顰顱顴顳颪颯颱颶飄
+飃飆飩飫餃餉餒餔餘餡
+餝餞餤餠餬餮餽餾饂饉
+饅饐饋饑饒饌饕馗馘馥
+馭馮馼駟駛駝駘駑駭駮
+駱駲駻駸騁騏騅駢騙騫
+騷驅驂驀驃騾驕驍驛驗
+驟驢驥驤驩驫驪骭骰骼
+髀髏髑髓體髞髟髢髣髦
+髯髫髮髴髱髷髻鬆鬘鬚
+鬟鬢鬣鬥鬧鬨鬩鬪鬮鬯
+鬲魄魃魏魍魎魑魘魴鮓
+鮃鮑鮖鮗鮟鮠鮨鮴鯀鯊
+鮹鯆鯏鯑鯒鯣鯢鯤鯔鯡
+鰺鯲鯱鯰鰕鰔鰉鰓鰌鰆
+鰈鰒鰊鰄鰮鰛鰥鰤鰡鰰
+鱇鰲鱆鰾鱚鱠鱧鱶鱸鳧
+鳬鳰鴉鴈鳫鴃鴆鴪鴦鶯
+鴣鴟鵄鴕鴒鵁鴿鴾鵆鵈
+鵝鵞鵤鵑鵐鵙鵲鶉鶇鶫
+鵯鵺鶚鶤鶩鶲鷄鷁鶻鶸
+鶺鷆鷏鷂鷙鷓鷸鷦鷭鷯
+鷽鸚鸛鸞鹵鹹鹽麁麈麋
+麌麒麕麑麝麥麩麸麪麭
+靡黌黎黏黐黔黜點黝黠
+黥黨黯黴黶黷黹黻黼黽
+鼇鼈皷鼕鼡鼬鼾齊齒齔
+齣齟齠齡齦齧齬齪齷齲
+齶龕龜龠堯槇遙瑤凜熙
+纊褜鍈銈蓜俉炻昱棈鋹曻彅丨仡仼伀伃伹佖侒侊侚侔俍偀倢俿倞偆偰偂傔僴僘兊兤冝冾凬刕劜劦勀勛匀匇匤卲厓厲叝﨎咜咊咩哿喆坙坥垬埈埇﨏塚增墲夋奓奛奝奣妤妺孖寀甯寘寬尞岦岺峵崧嵓﨑嵂嵭嶸嶹巐弡弴彧德忞恝悅悊惞惕愠惲愑愷愰憘戓抦揵摠撝擎敎昀昕昻昉昮昞昤晥晗晙晴晳暙暠暲暿曺朎朗杦枻桒柀栁桄棏﨓楨﨔榘槢樰橫橆橳橾櫢櫤毖氿汜沆汯泚洄涇浯涖涬淏淸淲淼渹湜渧渼溿澈澵濵瀅瀇瀨炅炫焏焄煜煆煇凞燁燾犱犾猤猪獷玽珉珖珣珒琇珵琦琪琩琮瑢璉璟甁畯皂皜皞皛皦益睆劯砡硎硤硺礰礼神祥禔福禛竑竧靖竫箞精絈絜綷綠緖繒罇羡羽茁荢荿菇菶葈蒴蕓蕙蕫﨟薰蘒﨡蠇裵訒訷詹誧誾諟諸諶譓譿賰賴贒赶﨣軏﨤逸遧郞都鄕鄧釚釗釞釭釮釤釥鈆鈐鈊鈺鉀鈼鉎鉙鉑鈹鉧銧鉷鉸鋧鋗鋙鋐﨧鋕鋠鋓錥錡鋻﨨錞鋿錝錂鍰鍗鎤鏆鏞鏸鐱鑅鑈閒隆﨩隝隯霳霻靃靍靏靑靕顗顥飯飼餧館馞驎髙髜魵魲鮏鮱鮻鰀鵰鵫鶴鸙黑</p></div>
+</body>
+</html>
