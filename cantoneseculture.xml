@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--   must include xmlns tag --> 
+<!--   must include xmlns tag -->
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
-<channel>
-        <title>CIBS節目：日新粵異</title> 
-        <itunes:author>RTHK.HK</itunes:author> 
-        <link>https://podcast.rthk.hk/podcast/item.php?pid=1632</link>
-        <itunes:subtitle><![CDATA[節目旨在探索粵語文化的保留及傳承，請來研究粵語文化的學者及來自不同文化產業的嘉賓，探討在港推廣粵語文化的挑戰及機遇。]]></itunes:subtitle> 
-        <itunes:summary><![CDATA[節目旨在探索粵語文化的保留及傳承，請來研究粵語文化的學者及來自不同文化產業的嘉賓，探討在港推廣粵語文化的挑戰及機遇。]]></itunes:summary>
-        <description><![CDATA[節目旨在探索粵語文化的保留及傳承，請來研究粵語文化的學者及來自不同文化產業的嘉賓，探討在港推廣粵語文化的挑戰及機遇。]]></description>
-        <language>zh-HK</language> 
-        <copyright>Radio Television Hong Kong</copyright> 
-        <itunes:owner>
-        <itunes:name>RTHK.HK</itunes:name> 
-        <itunes:email>webmaster@rthk.hk</itunes:email> 
-        </itunes:owner>
-        <!--   iTunes Browse Podcasts Category --> 
-        <itunes:category text="Education">
-        <!--   iTunes Browse Podcasts Subcategory  --> 
-        <itunes:category text="Language Courses"/> 
-        </itunes:category>
-        <itunes:keywords>RTHK, 香港電台, CIBS節目：日新粵異</itunes:keywords> 
-        <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
-	<itunes:explicit>no</itunes:explicit>
-                              <item>
-                                <title><![CDATA[第四集 粵在書中尋（二）：廣東話文學作品]]></title>
-                                <link><![CDATA[https://www.rthk.hk/radio/pth/programme/p1076_cantonese_culture/episode/746320]]></link>
-                                <itunes:author>Radio Television Hong Kong</itunes:author>
-                                <itunes:subtitle><![CDATA[本集邀請小王子廣東話版翻譯者蔡偉泉，分享以廣東話翻譯文學作品的特色及困難。]]></itunes:subtitle>
-                                <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
-                                <itunes:summary><![CDATA[本集邀請小王子廣東話版翻譯者蔡偉泉，分享以廣東話翻譯文學作品的特色及困難。]]></itunes:summary>
-                                <enclosure url="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/pth/p1076_cantonese_culture/m4a/20210430.m4a/master.m3u8" length="0" type="application/x-mpegURL" />
-                                <guid>746320</guid>
-                                <pubDate>2021-04-23</pubDate>
-                                <itunes:explicit>no</itunes:explicit>
-                             </item>
-                              <item>
-                                <title><![CDATA[第三集 粵在書中尋（一）：廣東話教材]]></title>
-                                <link><![CDATA[https://www.rthk.hk/radio/pth/programme/p1076_cantonese_culture/episode/745018]]></link>
-                                <itunes:author>Radio Television Hong Kong</itunes:author>
-                                <itunes:subtitle><![CDATA[本集邀請「冚唪唥粵文讀本計劃」負責人劉擇明先生，討論廣東話學習教材。]]></itunes:subtitle>
-                                <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
-                                <itunes:summary><![CDATA[本集邀請「冚唪唥粵文讀本計劃」負責人劉擇明先生，討論廣東話學習教材。]]></itunes:summary>
-                                <enclosure url="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/pth/p1076_cantonese_culture/m4a/20210423.m4a/master.m3u8" length="0" type="application/x-mpegURL" />
-                                <guid>745018</guid>
-                                <pubDate>2021-04-23</pubDate>
-                                <itunes:explicit>no</itunes:explicit>
-                             </item>
-                              <item>
-                                <title><![CDATA[第二集 粵拼粵有趣：粵語字典學與問]]></title>
-                                <link><![CDATA[https://www.rthk.hk/radio/pth/programme/p1076_cantonese_culture/episode/743652]]></link>
-                                <itunes:author>Radio Television Hong Kong</itunes:author>
-                                <itunes:subtitle><![CDATA[本集邀請「粵典」總編輯謝家尉先生，分享編寫粵語字典的理念及困難。]]></itunes:subtitle>
-                                <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
-                                <itunes:summary><![CDATA[本集邀請「粵典」總編輯謝家尉先生，分享編寫粵語字典的理念及困難。]]></itunes:summary>
-                                <enclosure url="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/pth/p1076_cantonese_culture/m4a/20210416.m4a/master.m3u8" length="0" type="application/x-mpegURL" />
-                                <guid>743652</guid>
-                                <pubDate>2021-04-16</pubDate>
-                                <itunes:explicit>no</itunes:explicit>
-                             </item>
-                              <item>
-                                <title><![CDATA[第一集 粵級挑戰：從語言學角度睇粵語]]></title>
-                                <link><![CDATA[https://www.rthk.hk/radio/pth/programme/p1076_cantonese_culture/episode/742264]]></link>
-                                <itunes:author>Radio Television Hong Kong</itunes:author>
-                                <itunes:subtitle><![CDATA[本集邀請香港教育大學語言學及現代語言系系主任，錢志安博士，分享粵語拼音，以及了解粵語在香港的發展。]]></itunes:subtitle>
-                                <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
-                                <itunes:summary><![CDATA[本集邀請香港教育大學語言學及現代語言系系主任，錢志安博士，分享粵語拼音，以及了解粵語在香港的發展。]]></itunes:summary>
-                                <enclosure url="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/pth/p1076_cantonese_culture/m4a/20210409.m4a/master.m3u8" length="0" type="application/x-mpegURL" />
-                                <guid>742264</guid>
-                                <pubDate>2021-04-09</pubDate>
-                                <itunes:explicit>no</itunes:explicit>
-                             </item>
-</channel>
+  <channel>
+    <title>CIBS節目：日新粵異</title>
+    <itunes:author>RTHK.HK</itunes:author>
+    <link>https://podcast.rthk.hk/podcast/item.php?pid=1632</link>
+    <itunes:subtitle><![CDATA[節目旨在探索粵語文化的保留及傳承，請來研究粵語文化的學者及來自不同文化產業的嘉賓，探討在港推廣粵語文化的挑戰及機遇。]]></itunes:subtitle>
+    <itunes:summary><![CDATA[節目旨在探索粵語文化的保留及傳承，請來研究粵語文化的學者及來自不同文化產業的嘉賓，探討在港推廣粵語文化的挑戰及機遇。]]></itunes:summary>
+    <description><![CDATA[節目旨在探索粵語文化的保留及傳承，請來研究粵語文化的學者及來自不同文化產業的嘉賓，探討在港推廣粵語文化的挑戰及機遇。]]></description>
+    <language>zh-HK</language>
+    <copyright>Radio Television Hong Kong</copyright>
+    <itunes:owner>
+      <itunes:name>RTHK.HK</itunes:name>
+      <itunes:email>webmaster@rthk.hk</itunes:email>
+    </itunes:owner>
+    <!--   iTunes Browse Podcasts Category -->
+    <itunes:category text="Education">
+      <!--   iTunes Browse Podcasts Subcategory  -->
+      <itunes:category text="Language Courses"/>
+    </itunes:category>
+    <itunes:keywords>RTHK, 香港電台, CIBS節目：日新粵異</itunes:keywords>
+    <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
+    <itunes:explicit>no</itunes:explicit>
+    <item>
+      <title><![CDATA[第四集 粵在書中尋（二）：廣東話文學作品]]></title>
+      <link><![CDATA[https://www.rthk.hk/radio/pth/programme/p1076_cantonese_culture/episode/746320]]></link>
+      <itunes:author>Radio Television Hong Kong</itunes:author>
+      <itunes:subtitle><![CDATA[本集邀請小王子廣東話版翻譯者蔡偉泉，分享以廣東話翻譯文學作品的特色及困難。]]></itunes:subtitle>
+      <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
+      <itunes:summary><![CDATA[本集邀請小王子廣東話版翻譯者蔡偉泉，分享以廣東話翻譯文學作品的特色及困難。]]></itunes:summary>
+      <enclosure url="https://github.com/tpnonthealps/font-weight/raw/master/cantoneseculture/4.m4a" length="0" type="audio/m4a" />
+      <guid>746320</guid>
+      <pubDate>2021-04-23</pubDate>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title><![CDATA[第三集 粵在書中尋（一）：廣東話教材]]></title>
+      <link><![CDATA[https://www.rthk.hk/radio/pth/programme/p1076_cantonese_culture/episode/745018]]></link>
+      <itunes:author>Radio Television Hong Kong</itunes:author>
+      <itunes:subtitle><![CDATA[本集邀請「冚唪唥粵文讀本計劃」負責人劉擇明先生，討論廣東話學習教材。]]></itunes:subtitle>
+      <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
+      <itunes:summary><![CDATA[本集邀請「冚唪唥粵文讀本計劃」負責人劉擇明先生，討論廣東話學習教材。]]></itunes:summary>
+      <enclosure url="https://github.com/tpnonthealps/font-weight/raw/master/cantoneseculture/3.m4a" length="0" type="audio/m4a" />
+      <guid>745018</guid>
+      <pubDate>2021-04-23</pubDate>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title><![CDATA[第二集 粵拼粵有趣：粵語字典學與問]]></title>
+      <link><![CDATA[https://www.rthk.hk/radio/pth/programme/p1076_cantonese_culture/episode/743652]]></link>
+      <itunes:author>Radio Television Hong Kong</itunes:author>
+      <itunes:subtitle><![CDATA[本集邀請「粵典」總編輯謝家尉先生，分享編寫粵語字典的理念及困難。]]></itunes:subtitle>
+      <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
+      <itunes:summary><![CDATA[本集邀請「粵典」總編輯謝家尉先生，分享編寫粵語字典的理念及困難。]]></itunes:summary>
+      <enclosure url="https://github.com/tpnonthealps/font-weight/raw/master/cantoneseculture/2.m4a" length="0" type="audio/m4a" />
+      <guid>743652</guid>
+      <pubDate>2021-04-16</pubDate>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title><![CDATA[第一集 粵級挑戰：從語言學角度睇粵語]]></title>
+      <link><![CDATA[https://www.rthk.hk/radio/pth/programme/p1076_cantonese_culture/episode/742264]]></link>
+      <itunes:author>Radio Television Hong Kong</itunes:author>
+      <itunes:subtitle><![CDATA[本集邀請香港教育大學語言學及現代語言系系主任，錢志安博士，分享粵語拼音，以及了解粵語在香港的發展。]]></itunes:subtitle>
+      <itunes:image href="https://programme.rthk.hk/assets/images/rthk/pth/p1076_cantonese_culture/9321_115.jpg"></itunes:image>
+      <itunes:summary><![CDATA[本集邀請香港教育大學語言學及現代語言系系主任，錢志安博士，分享粵語拼音，以及了解粵語在香港的發展。]]></itunes:summary>
+      <enclosure url="https://github.com/tpnonthealps/font-weight/raw/master/cantoneseculture/1.m4a" length="0" type="audio/m4a" />
+      <guid>742264</guid>
+      <pubDate>2021-04-09</pubDate>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+  </channel>
 </rss>
